@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    repo: https://github.com/Rahul-prvt/n8n-on-render
+    region: oregon
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: WEBHOOK_URL
+        value: https://rahul-n8n.onrender.com/
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: rahu0734@gmail.com
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: Rahulk7510
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: N8N_PORT
+        value: 5678
